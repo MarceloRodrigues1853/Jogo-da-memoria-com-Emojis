@@ -32,7 +32,7 @@ MarceloRodrigues1853
 
 ## Agradecimentos
 
-Agradeço à Digital Innovation One pela oportunidade de aprendizado e ao instrutor do curso por compartilhar conhecimento.
+Agradeço à Digital Innovation One pela oportunidade de aprendizado e ao instrutor do curso https://github.com/felipeAguiarCode por compartilhar conhecimento.
 
 ---
 
