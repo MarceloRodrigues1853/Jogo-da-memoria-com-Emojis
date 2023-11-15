@@ -14,7 +14,7 @@ O Jogo da Memória com Emojis é uma aplicação simples que testa a sua memóri
 
 ## Como Jogar
 
-1. Abra o arquivo `index.html` no seu navegador.
+1. Abra o [Jogo da Memória com Emojis](https://marcelorodrigues1853.github.io/Jogo-da-memoria-com-Emojis/) no seu navegador.
 2. Clique em duas cartas para tentar encontrar os pares correspondentes.
 3. Continue virando cartas até encontrar todos os pares.
 
@@ -32,7 +32,7 @@ MarceloRodrigues1853
 
 ## Agradecimentos
 
-Agradeço à Digital Innovation One pela oportunidade de aprendizado e ao instrutor do curso https://github.com/felipeAguiarCode por compartilhar conhecimento.
+Agradeço à Digital Innovation One pela oportunidade de aprendizado e ao instrutor do curso [felipeAguiarCode](https://github.com/felipeAguiarCode) por compartilhar conhecimento.
 
 ---
 

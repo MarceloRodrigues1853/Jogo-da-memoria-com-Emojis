@@ -23,9 +23,9 @@ let startTime;
 let endTime;
 
 // Adiciona variáveis para as músicas e sons
-let musicaFundo = new Audio("/src/audios/trilhaSonora.mp3");
-let somVirarCarta = new Audio("/src/audios/hit.mp3");
-let somFimJogo = new Audio("/src/audios/gameover.mp3");
+let musicaFundo = new Audio("src/audios/trilhaSonora.mp3");
+let somVirarCarta = new Audio("src/audios/hit.mp3");
+let somFimJogo = new Audio("src/audios/gameover.mp3");
 
 // Embaralha os emojis ao iniciar o jogo
 let embaralharEmojis = emojis.sort(() => (Math.random() > 0.5 ? 2 : -1));
