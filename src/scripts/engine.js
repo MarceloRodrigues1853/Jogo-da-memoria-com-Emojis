@@ -42,7 +42,7 @@ for (let i = 0; i < emojis.length; i++) {
 // Função chamada quando uma carta é clicada
 function handleClick() {
   somVirarCarta.play(); // Toca o som ao virar a carta
-  musicaFundo.play();
+  musicaFundo.play(); // toca muica de fundo 
 
   if (abrirCards.length < 2) {
     this.classList.add("boxOpen"); // Adiciona a classe para mostrar a carta virada
