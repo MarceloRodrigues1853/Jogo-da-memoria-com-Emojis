@@ -69,10 +69,14 @@ function checkMatch() {
 
   abrirCards = []; // Limpa o array de cartas abertas
 
-  // Verifica se todas as cartas têm correspondência (jogo concluído)
+  // Função para verificar se todas as cartas têm correspondência (jogo concluído)
   if (document.querySelectorAll(".boxMatch").length === emojis.length) {
     endTime = new Date();
-    const tempoTotal = (endTime - startTime) / 1000;
+    const tempoTotalSegundos = (endTime - startTime) / 1000;
+    const tempoTotalMinutos = Math.ceil(tempoTotalSegundos / 60); // Usando Math.ceil para arredondar para cima
+
+    // Calcula os pontos com base no tempo e tentativas
+    const pontos = calcularPontos(tempoTotalMinutos, tentativas);
 
     // Toca o som antes da mensagem de alerta
     somFimJogo.play();
@@ -82,11 +86,13 @@ function checkMatch() {
       // Parar todas as músicas antes de exibir a mensagem de alerta
       pararMusicas();
 
-      // Exibe a mensagem de vitória com o número de tentativas e tempo total
+      // Exibe a mensagem de vitória com os pontos, tempo e tentativas
       alert(
-        `Você venceu em ${tentativas} tentativas e ${tempoTotal.toFixed(
+        `Você venceu em ${tempoTotalMinutos.toFixed(
           2
-        )} segundos!`
+        )} minutos com ${tentativas} tentativas!\nPontuação: ${pontos.toFixed(
+          2
+        )}`
       );
     }, 1000); // Aguarda 1 segundo (1000 milissegundos) antes de exibir a mensagem de alerta
   }
@@ -97,6 +103,16 @@ function pararMusicas() {
   musicaFundo.pause();
   somVirarCarta.pause();
   somFimJogo.pause();
+}
+
+// Função para calcular os pontos com base no tempo e tentativas
+function calcularPontos(tempo, tentativas) {
+  // Ajuste os valores conforme necessário para atender aos requisitos do seu sistema de pontuação
+  const pontuacaoTempo = 100 - tempo; // Quanto menor o tempo, mais pontos
+  const pontuacaoTentativas = 50 - tentativas; // Quanto menos tentativas, mais pontos
+  const pontosTotais = pontuacaoTempo + pontuacaoTentativas;
+
+  return pontosTotais;
 }
 
 // Função para embaralhar as cartas durante o jogo
