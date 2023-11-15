@@ -1,5 +1,7 @@
+/* Importa o arquivo de estilos reset.css */
 @import url(../styles/reset.css);
 
+/* Estilização do corpo da página */
 body {
   display: flex;
   justify-content: center;
@@ -9,6 +11,7 @@ body {
   user-select: none;
 }
 
+/* Estilização da área principal do jogo */
 .container {
   position: relative;
   display: flex;
@@ -26,6 +29,7 @@ body {
   padding: 40px 60px;
 }
 
+/* Estilização do título do jogo */
 h2 {
   font-size: 3em;
   color: #fff;
@@ -33,6 +37,7 @@ h2 {
   letter-spacing: 0.1em;
 }
 
+/* Estilização do botão de reiniciar o jogo */
 .reset {
   padding: 15px 20px;
   width: 100%;
@@ -46,11 +51,13 @@ h2 {
   font-weight: 600;
 }
 
+/* Estilização do botão de reiniciar o jogo quando está em foco */
 .reset:focus {
   color: #ec38bc;
   background-color: #262809;
 }
 
+/* Estilização da área do jogo */
 .game {
   width: 430px;
   height: 430px;
@@ -61,6 +68,7 @@ h2 {
   perspective: 500px;
 }
 
+/* Estilização dos itens do jogo (cartas) */
 .item {
   position: relative;
   width: 100px;
@@ -69,27 +77,28 @@ h2 {
   align-items: center;
   justify-content: center;
   background-color: #fff;
-
   font-size: 3em;
   transform: rotateY(180deg);
   transition: 0.25s;
 }
 
+/* Estilização da parte traseira das cartas */
 .item::after {
   content: "";
   position: absolute;
   inset: 0;
   background: #404040;
-  /* opacity: 0.85; */
   transition: 0.25s;
   transform: rotateY(0deg);
   backface-visibility: hidden;
 }
 
+/* Estilização quando a carta está aberta */
 .item.boxOpen {
   transform: rotateY(0deg);
 }
 
+/* Estilização da parte traseira quando a carta está aberta ou tem correspondência */
 .boxOpen::after,
 .boxMatch::after {
   transform: rotateY(180deg);

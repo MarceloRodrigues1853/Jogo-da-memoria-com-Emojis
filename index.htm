@@ -2,20 +2,27 @@
 <html lang="pt-br">
 
 <head>
+  <!-- Define a codificação de caracteres e a escala inicial -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Define o título da página -->
   <title>Jogo Da Memória</title>
- 
+  <!-- Importa o arquivo de estilos principal -->
   <link rel="stylesheet" href="./src/styles/main.css">
 </head>
 
 <body>
+  <!-- Estrutura principal da página -->
   <div class="container">
+    <!-- Título do jogo -->
     <h2>JOGO DA MEMÓRIA</h2>
+    <!-- Área do jogo -->
     <div class="game"></div>
+    <!-- Botão de reiniciar o jogo -->
     <button class="reset" onclick="window.location.reload()">RESET GAME</button>
   </div>
 
+  <!-- Importa o script JavaScript que controla a lógica do jogo -->
   <script src="./src/scripts/engine.js" defer></script>
 </body>
 
